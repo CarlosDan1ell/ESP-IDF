@@ -11,8 +11,8 @@
 #include "lwip/err.h"
 #include "lwip/sys.h"
 
-#define EXAMPLE_ESP_WIFI_SSID   "Capitalismo nao funciona"
-#define EXAMPLE_ESP_WIFI_PASS   "12345678c"
+#define EXAMPLE_ESP_WIFI_SSID   "LSE"
+#define EXAMPLE_ESP_WIFI_PASS   "HubLS3s2"
 #define EXAMPLE_ESP_MAXIMUM_RETRY   10
 
 #if CONFIG_ESP_WPA3_SAE_PWE_HUNT_AND_PECK
@@ -85,7 +85,7 @@ void wifi_init_sta(void)
     s_wifi_event_group = xEventGroupCreate();
 
     ESP_ERROR_CHECK(esp_netif_init());
-    ESP_ERROR_CHECK(esp_event_loop_create_default());
+    //ESP_ERROR_CHECK(esp_event_loop_create_default());
 
     esp_netif_create_default_wifi_sta();
 
@@ -124,22 +124,4 @@ void wifi_init_sta(void)
     else{
         ESP_LOGE(TAG,"UNEXPECTED EVENT");
     }
-}
-
-void app_main(void)
-{
-    //Initialize NVS
-    esp_err_t ret = nvs_flash_init();
-    if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
-      ESP_ERROR_CHECK(nvs_flash_erase());
-      ret = nvs_flash_init();
-    }
-    ESP_ERROR_CHECK(ret);
-
-    if (CONFIG_LOG_MAXIMUM_LEVEL > CONFIG_LOG_DEFAULT_LEVEL) {
-        esp_log_level_set("wifi", CONFIG_LOG_MAXIMUM_LEVEL);
-    }
-
-    ESP_LOGI(TAG, "ESP_WIFI_MODE_STA");
-    wifi_init_sta();
 }
