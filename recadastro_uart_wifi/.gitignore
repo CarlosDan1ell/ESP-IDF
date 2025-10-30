@@ -42,8 +42,8 @@ RemoteSystemsTempFiles/
 # Espressif IDF (ESP32)
 ##############################################
 # Arquivos de configuração gerados. Rastreie 'sdkconfig.defaults' em vez disso.
-sdkconfig
-sdkconfig.old
+# sdkconfig
+# sdkconfig.old
 
 # Pasta de componentes gerenciados pelo idf-component-manager
 managed_components/
