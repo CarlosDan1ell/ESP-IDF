@@ -1,0 +1,92 @@
+##############################################
+# STM32CubeIDE / Eclipse
+##############################################
+.metadata/
+.recommenders/
+.settings/
+RemoteSystemsTempFiles/
+*.launch
+
+# Arquivos de build gerados
+*/[Dd]ebug/
+*/[Rr]elease/
+*/build/
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.su
+*.d
+
+##############################################
+# Visual Studio / C# (.NET)
+##############################################
+*.obj
+*.pdb
+*.exe
+*.dll
+*.cache
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.dbmdl
+*.log
+*.vs/
+[Bb]in/
+[Oo]bj/
+
+##############################################
+# Espressif IDF (ESP32)
+##############################################
+# Arquivos de configuração gerados. Rastreie 'sdkconfig.defaults' em vez disso.
+# sdkconfig
+# sdkconfig.old
+
+# Pasta de componentes gerenciados pelo idf-component-manager
+managed_components/
+
+# Arquivo de lock do gerenciador de componentes
+dependencies.lock
+
+# Arquivos de saída do build (parcialmente cobertos por regras genéricas)
+build/
+
+# Arquivos gerados pelas ferramentas de CI/Build da Espressif
+build_summary_*.xml
+app_info_*.txt
+size_info_*.txt
+pytest_embedded_log/
+
+##############################################
+# VSCode (editor)
+##############################################
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+##############################################
+# Arquivos temporários e sistema operacional
+##############################################
+*.bak
+*~
+*.swp
+*.swo
+core.*
+Thumbs.db
+desktop.ini
+.DS_Store
+
+##############################################
+# Exclusão de histórico local
+##############################################
+.history/
+**/.localhistory/
+
+##############################################
+# Exceções específicas
+##############################################

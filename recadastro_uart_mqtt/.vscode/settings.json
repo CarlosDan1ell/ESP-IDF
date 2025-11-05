@@ -1,0 +1,10 @@
+{
+    "idf.flashType": "UART",
+    "files.associations": {
+        "driver_defines.h": "c",
+        "sdkconfig.h": "c",
+        "driver_wifi.h": "c",
+        "limits": "c"
+    },
+    "idf.portWin": "COM4"
+}
