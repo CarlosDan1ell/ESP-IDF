@@ -1,0 +1,20 @@
+SET_REGISTER:
+REQUISIÇÃO:
+{"action":"set_register","payload":{"type":"test_device","name":"test001","request_id":"abcd","data":{"unique_id":STRING,"broker_address":"mqtt://"+BROKER(STRING)+":"+PORT(STRING), "publish_topic":STRING, "subscribe_topic":STRING, "password":STRING, "ssid":STRING}}}
+
+RESPOSTA:
+{"action":"set_register","payload":{"type":"test_device","name":"test001","request_id":"abcd"}}
+
+GET_REGISTER:
+REQUISIÇÃO:
+{"action":"get_register","payload":{"type":"test_device","name":"test001","request_id":"abcd"}}
+
+RESPOSTA:
+{"action":"get_register","payload":{"type":"test_device","name":"test001","request_id":"abcd","data":{"unique_id":STRING,"broker_address":"mqtt://"+BROKER(STRING)+":"+PORT(STRING), "publish_topic":STRING, "subscribe_topic":STRING}}}
+
+DEFAULT_SETTINGS:
+REQUISIÇÃO:
+{"action":"defaultsettings","payload":{"type":"test_device","name":"test001","request_id":"abcd"}}
+
+RESPOSTA:
+{"action":"defaultsettings","payload":{"type":"test_device","name":"test001","request_id":"abcd"}}
